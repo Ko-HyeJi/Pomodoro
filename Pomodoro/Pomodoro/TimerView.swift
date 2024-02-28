@@ -63,8 +63,9 @@ struct TimerView: View {
             haptic.selectionChanged()
           }
         })
-        .frame(height: 300)
-        .disabled(timer != nil)
+        .frame(width: UIWidth * 0.76, height: UIWidth * 0.76)
+        .opacity(timer == nil ? 100 : 0)
+        
       }
       Spacer()
       if timer == nil {
@@ -82,6 +83,7 @@ struct TimerView: View {
                 .foregroundStyle(Color.Neumorphic.secondary)
             }
             .padding()
+            .padding(.horizontal)
         }
       } else {
         Button {
@@ -98,6 +100,7 @@ struct TimerView: View {
                 .foregroundStyle(Color.Neumorphic.secondary)
             }
             .padding()
+            .padding(.horizontal)
         }
       }
       Spacer()

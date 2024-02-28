@@ -31,13 +31,12 @@ struct Hand: View {
   var body: some View {
     let percentage: CGFloat = CGFloat(selectedSecond) / 3600
     let color: Color = Color.Neumorphic.main
-    let padding: CGFloat = UIWidth * 0.085
     
     Circle()
       .fill(color)
       .softInnerShadow(Circle())
       .frame(width: 30, height: 30)
-      .offset(y: -geometry.size.width / 2 + padding)
+      .offset(y: -geometry.size.width / 2)
       .rotationEffect(.degrees(Double(percentage) * 360))
       .position(x: geometry.size.width / 2, y: geometry.size.height / 2)
       .gesture(DragGesture(minimumDistance: 0)
