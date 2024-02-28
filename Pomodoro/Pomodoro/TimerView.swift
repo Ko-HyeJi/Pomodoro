@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Neumorphic
+import AVFoundation
 
 let UIWidth = UIScreen.main.bounds.width
 
@@ -30,6 +31,7 @@ struct TimerView: View {
   private var progress: Double {
     Double(selectedSecond) * 0.0002777777778
   }
+  let haptic = UISelectionFeedbackGenerator()
   
   var body: some View {
     VStack {
@@ -39,7 +41,7 @@ struct TimerView: View {
         .monospacedDigit()
         .tracking(1.5)
         .foregroundStyle(Color.Neumorphic.secondary)
-        .font(.title)
+        .font(.largeTitle)
         .bold()
       
       Spacer()
@@ -56,6 +58,11 @@ struct TimerView: View {
         GeometryReader { geometry in
           Hand(geometry: geometry, selectedSecond: $selectedSecond)
         }
+        .onChange(of: selectedSecond, {
+          if timer == nil {
+            haptic.selectionChanged()
+          }
+        })
         .frame(height: 300)
         .disabled(timer != nil)
       }
@@ -63,6 +70,7 @@ struct TimerView: View {
       if timer == nil {
         Button {
           startTimer()
+          haptic.selectionChanged()
         } label: {
           RoundedRectangle(cornerRadius: 25.0)
             .softOuterShadow()
@@ -78,6 +86,7 @@ struct TimerView: View {
       } else {
         Button {
           stopTimer()
+          haptic.selectionChanged()
         } label: {
           RoundedRectangle(cornerRadius: 25.0)
             .softInnerShadow(RoundedRectangle(cornerRadius: 25.0))
