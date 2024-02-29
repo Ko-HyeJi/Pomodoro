@@ -20,14 +20,14 @@ struct CircularProgressView: View {
       path.addLine(to: CGPoint(x: 50, y: 10))
       path.addArc(center: .init(x: 50, y: 50), radius: UIWidth * 0.38, startAngle: .degrees(-90), endAngle: .degrees(-90 + 360 * progress), clockwise: false)
     }
-    .fill(Color.accentColor.opacity(0.85))
+    .fill(Color.accentColor)
     .frame(width: 100, height: 100)
   }
 }
 
 struct TimerView: View {
   @State private var timer: Timer? = nil
-  @State private var selectedSecond: Int = 600
+  @State private var selectedSecond: Int = 900
   private var progress: Double {
     Double(selectedSecond) * 0.0002777777778
   }
@@ -40,7 +40,7 @@ struct TimerView: View {
       Text("\(minutes(selectedSecond)):\(seconds(selectedSecond))")
         .monospacedDigit()
         .tracking(1.5)
-        .foregroundStyle(Color.Neumorphic.secondary)
+        .foregroundStyle(Color.secondary)
         .font(.largeTitle)
         .bold()
       
@@ -49,14 +49,35 @@ struct TimerView: View {
       ZStack {
         Circle()
           .frame(width: UIWidth * 0.76)
-          .foregroundStyle(Color.Neumorphic.main)
+          .foregroundStyle(Color.main)
           .overlay {
             CircularProgressView(progress: self.progress)
           }
-          .softOuterShadow()
+          .softOuterShadow(offset: 3)
         
         GeometryReader { geometry in
-          Hand(geometry: geometry, selectedSecond: $selectedSecond)
+          ZStack {
+            
+            ForEach(0..<60) { tick in
+              Group {
+                Rectangle()
+                  .frame(width: 1, height: UIWidth * (tick % 5 == 0 ? 0.05 : 0.02))
+                  .offset(y: -geometry.size.width / 2 + (tick % 5 == 0 ? 10 : 5))
+                
+                if tick % 5 == 0 {
+                  Text("\(tick)")
+                    .rotationEffect(.degrees(Double(tick) * -6))
+                    .offset(y: -geometry.size.width * 0.55)
+                    .font(.caption)
+                }
+              }
+              .foregroundStyle(Color.secondary)
+              .rotationEffect(.degrees(Double(tick) * 6))
+            }
+            
+            Handle(geometry: geometry, selectedSecond: $selectedSecond)
+              .opacity(timer == nil ? 100 : 0)
+          }
         }
         .onChange(of: selectedSecond, {
           if timer == nil {
@@ -64,7 +85,6 @@ struct TimerView: View {
           }
         })
         .frame(width: UIWidth * 0.76, height: UIWidth * 0.76)
-        .opacity(timer == nil ? 100 : 0)
         
       }
       Spacer()
@@ -74,13 +94,13 @@ struct TimerView: View {
           haptic.selectionChanged()
         } label: {
           RoundedRectangle(cornerRadius: 25.0)
-            .softOuterShadow()
-            .foregroundStyle(Color.Neumorphic.main)
+            .softOuterShadow(offset: 3)
+            .foregroundStyle(Color.main)
             .frame(height: 60)
             .overlay {
               Image(systemName: "play.fill")
                 .font(.title)
-                .foregroundStyle(Color.Neumorphic.secondary)
+                .foregroundStyle(Color.secondary)
             }
             .padding()
             .padding(.horizontal)
@@ -92,12 +112,12 @@ struct TimerView: View {
         } label: {
           RoundedRectangle(cornerRadius: 25.0)
             .softInnerShadow(RoundedRectangle(cornerRadius: 25.0))
-            .foregroundStyle(Color.Neumorphic.main)
+            .foregroundStyle(Color.main)
             .frame(height: 60)
             .overlay {
               Image(systemName: "pause.fill")
                 .font(.title)
-                .foregroundStyle(Color.Neumorphic.secondary)
+                .foregroundStyle(Color.secondary)
             }
             .padding()
             .padding(.horizontal)
@@ -107,7 +127,7 @@ struct TimerView: View {
     }
     .padding()
     .background {
-      Color.Neumorphic.main
+      Color.main
         .ignoresSafeArea()
     }
   }
