@@ -50,10 +50,9 @@ struct TimerView: View {
         Circle()
           .frame(width: UIWidth * 0.76)
           .foregroundStyle(Color.main)
-          .overlay {
-            CircularProgressView(progress: self.progress)
-          }
-          .softOuterShadow(offset: 3)
+          .softOuterShadow(darkShadow: .darkShadow, lightShadow: .lightShadow)
+
+        CircularProgressView(progress: self.progress)
         
         GeometryReader { geometry in
           ZStack {
@@ -94,7 +93,7 @@ struct TimerView: View {
           haptic.selectionChanged()
         } label: {
           RoundedRectangle(cornerRadius: 25.0)
-            .softOuterShadow(offset: 3)
+            .softOuterShadow(darkShadow: .darkShadow, lightShadow: .lightShadow)
             .foregroundStyle(Color.main)
             .frame(height: 60)
             .overlay {
@@ -111,7 +110,7 @@ struct TimerView: View {
           haptic.selectionChanged()
         } label: {
           RoundedRectangle(cornerRadius: 25.0)
-            .softInnerShadow(RoundedRectangle(cornerRadius: 25.0))
+            .softInnerShadow(RoundedRectangle(cornerRadius: 25.0), darkShadow: .darkShadow, lightShadow: .lightShadow)
             .foregroundStyle(Color.main)
             .frame(height: 60)
             .overlay {
