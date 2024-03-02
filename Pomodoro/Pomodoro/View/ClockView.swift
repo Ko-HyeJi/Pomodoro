@@ -30,16 +30,16 @@ struct Handle: View {
   
   var body: some View {
     let percentage: CGFloat = CGFloat(selectedSecond) / 3600
-    let color = Color.main
+    let color = Color.accentColor
     
     let line = Rectangle()
-      .softInnerShadow(Rectangle(), darkShadow: .darkShadow, lightShadow: .lightShadow)
+      .shadow(radius: 3, x: 3, y: 3)
       .frame(width: 3, height: geometry.size.width * 0.5)
-      .offset(x: 1.5, y: -geometry.size.width / 4)
+      .offset(y: -geometry.size.width / 4)
     
     let circle = Circle()
-      .softInnerShadow(Circle(), darkShadow: .darkShadow, lightShadow: .lightShadow)
-      .frame(width: 30, height: 30)
+      .shadow(radius: 3, x: 3, y: 3)
+      .frame(width: geometry.size.width * 0.1)
       .offset(y: -geometry.size.width / 2)
     
     return Group {
