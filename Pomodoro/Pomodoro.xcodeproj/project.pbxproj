@@ -15,7 +15,7 @@
 		8B736C8B2B93BB5D00C337C4 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B736C8A2B93BB5D00C337C4 /* NotificationService.swift */; };
 		8B736C8D2B93BCAB00C337C4 /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B736C8C2B93BCAB00C337C4 /* TimerViewModel.swift */; };
 		8BED9CA82B8F3ECD00B26FDF /* Neumorphic in Frameworks */ = {isa = PBXBuildFile; productRef = 8BED9CA72B8F3ECD00B26FDF /* Neumorphic */; };
-		8BED9CAF2B8F886E00B26FDF /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BED9CAE2B8F886E00B26FDF /* ClockView.swift */; };
+		8BED9CAF2B8F886E00B26FDF /* HandleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BED9CAE2B8F886E00B26FDF /* HandleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +27,7 @@
 		8B0591262B88E1DA0017D5F5 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		8B736C8A2B93BB5D00C337C4 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		8B736C8C2B93BCAB00C337C4 /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
-		8BED9CAE2B8F886E00B26FDF /* ClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockView.swift; sourceTree = "<group>"; };
+		8BED9CAE2B8F886E00B26FDF /* HandleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				8B0591262B88E1DA0017D5F5 /* TimerView.swift */,
-				8BED9CAE2B8F886E00B26FDF /* ClockView.swift */,
+				8BED9CAE2B8F886E00B26FDF /* HandleView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -190,7 +190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B0591272B88E1DA0017D5F5 /* TimerView.swift in Sources */,
-				8BED9CAF2B8F886E00B26FDF /* ClockView.swift in Sources */,
+				8BED9CAF2B8F886E00B26FDF /* HandleView.swift in Sources */,
 				8B05911B2B88E1C30017D5F5 /* ContentView.swift in Sources */,
 				8B736C8B2B93BB5D00C337C4 /* NotificationService.swift in Sources */,
 				8B736C8D2B93BCAB00C337C4 /* TimerViewModel.swift in Sources */,

@@ -93,7 +93,7 @@ struct TimerView: View {
     Text("\(minutes(selectedSecond)):\(seconds(selectedSecond))")
       .monospacedDigit()
       .tracking(1.5)
-      .foregroundStyle(Color.secondary)
+      .foregroundStyle(Color.label)
       .font(.largeTitle)
       .bold()
   }
@@ -123,7 +123,7 @@ struct TimerView: View {
                   .font(.caption)
               }
             }
-            .foregroundStyle(Color.secondary)
+            .foregroundStyle(Color.label)
             .rotationEffect(.degrees(Double(tick) * 6))
           }
           
@@ -133,7 +133,7 @@ struct TimerView: View {
           Circle()
             .foregroundStyle(Color.main)
             .frame(width: UIWidth * 0.15)
-            .shadow(radius: 3, x: 3, y: 3)
+            .shadow(color: .darkShadow, radius: 3, x: 3, y: 3)
         }
       }
       .onChange(of: selectedSecond, {
@@ -158,7 +158,7 @@ struct TimerView: View {
             .overlay {
               Image(systemName: "play.fill")
                 .font(.title)
-                .foregroundStyle(Color.secondary)
+                .foregroundStyle(Color.label)
             }
         }
       } else {
@@ -171,7 +171,7 @@ struct TimerView: View {
             .overlay {
               Image(systemName: "pause.fill")
                 .font(.title)
-                .foregroundStyle(Color.secondary)
+                .foregroundStyle(Color.label)
             }
         }
       }

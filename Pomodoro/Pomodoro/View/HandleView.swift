@@ -8,20 +8,20 @@
 import SwiftUI
 import Neumorphic
 
-struct ClockView: View {
-  @State private var selectedSecond: Int = 0
-  
-  var body: some View {
-    VStack {
-      Text("Selected second: \(selectedSecond)")
-      Spacer()
-      GeometryReader { geometry in
-        Handle(geometry: geometry, selectedSecond: $selectedSecond)
-      }
-      Spacer()
-    }
-  }
-}
+//struct ClockView: View {
+//  @State private var selectedSecond: Int = 0
+//  
+//  var body: some View {
+//    VStack {
+//      Text("Selected second: \(selectedSecond)")
+//      Spacer()
+//      GeometryReader { geometry in
+//        Handle(geometry: geometry, selectedSecond: $selectedSecond)
+//      }
+//      Spacer()
+//    }
+//  }
+//}
 
 struct Handle: View {
   let geometry: GeometryProxy
@@ -33,12 +33,13 @@ struct Handle: View {
     let color = Color.accentColor
     
     let line = Rectangle()
-      .shadow(radius: 3, x: 3, y: 3)
+      .shadow(color: .darkShadow, radius: 3, x: 3, y: 3)
       .frame(width: 3, height: geometry.size.width * 0.5)
       .offset(y: -geometry.size.width / 4)
     
     let circle = Circle()
-      .shadow(radius: 3, x: 3, y: 3)
+      .shadow(color: .darkShadow, radius: 3, x: 3, y: 3)
+      .frame(maxWidth: 50)
       .frame(width: geometry.size.width * 0.1)
       .offset(y: -geometry.size.width / 2)
     
@@ -61,6 +62,6 @@ struct Handle: View {
   }
 }
 
-#Preview {
-  ClockView()
-}
+//#Preview {
+//  ClockView()
+//}
