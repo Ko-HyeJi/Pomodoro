@@ -8,6 +8,7 @@
 import SwiftUI
 import Neumorphic
 import AVFoundation
+import AudioToolbox
 
 struct TimerView: View {
   @State private var timer: Timer? = nil
@@ -87,7 +88,6 @@ struct TimerView: View {
       }
     }
   }
-  
   
   var textTimer: some View {
     Text("\(minutes(selectedSecond)):\(seconds(selectedSecond))")
@@ -200,6 +200,7 @@ struct TimerView: View {
         self.selectedSecond -= 1
       } else {
         stopTimer()
+        playSystemSound()
       }
     }
   }
@@ -216,6 +217,10 @@ struct TimerView: View {
   
   private func seconds(_ seconds: Int) -> String {
     return String(format: "%02d", seconds % 60)
+  }
+  
+  func playSystemSound() {
+    AudioServicesPlaySystemSound(1005)
   }
 }
 
