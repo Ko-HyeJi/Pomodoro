@@ -67,12 +67,13 @@ struct TimerView: View {
       Color.main
         .ignoresSafeArea()
     }
-    .onChange(of: scenePhase) { oldScenePhase, newScenePhase in
+    .onChange(of: scenePhase) { newScenePhase in
       switch newScenePhase {
       case .active:
         if let saveDate = saveDate, let saveTime = saveTime {
           selectedSecond = saveTime - Int(Date().timeIntervalSince(saveDate))
           if selectedSecond < 0 {
+            self.stopTimer()
             selectedSecond = 0
           }
           self.saveDate = nil
@@ -94,8 +95,7 @@ struct TimerView: View {
       .monospacedDigit()
       .tracking(1.5)
       .foregroundStyle(Color.label)
-      .font(.largeTitle)
-      .bold()
+      .font(.largeTitle.bold())
   }
   
   var circleTimer: some View {
@@ -136,11 +136,11 @@ struct TimerView: View {
             .shadow(color: .darkShadow, radius: 3, x: 3, y: 3)
         }
       }
-      .onChange(of: selectedSecond, {
+      .onChange(of: selectedSecond) { _ in
         if timer == nil {
           haptic.selectionChanged()
         }
-      })
+      }
       .frame(width: UIWidth * 0.76, height: UIWidth * 0.76)
       
     }
