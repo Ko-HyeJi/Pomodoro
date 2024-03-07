@@ -8,8 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+  let notificationService = NotificationService.shared
+  
   var body: some View {
-    TimerView()
+    ClockView()
+      .onAppear {
+        notificationService.requestAuthorization()
+      }
   }
 }
 
