@@ -6,6 +6,7 @@
 //
 
 import NotificationCenter
+import SwiftUI
 
 class NotificationService {
   static let shared = NotificationService()
@@ -20,16 +21,22 @@ class NotificationService {
   
   func setTimerEndNotification(after timerInterval: Int) {
     let content = UNMutableNotificationContent()
-    content.title = "Pomodoro"
-    content.body = "Your timer has ended."
+    content.title = "Pomodoro".localized()
+    content.body = "Your timer has ended.".localized()
     content.sound = UNNotificationSound.default
-
+    
     let endDate = Date().addingTimeInterval(Double(timerInterval))
     let components = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: endDate)
-
+    
     let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: false)
-
+    
     let request = UNNotificationRequest(identifier: "timerEnd", content: content, trigger: trigger)
     UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+  }
+}
+
+extension String {
+  func localized(comment: String = "") -> String {
+    return NSLocalizedString(self, comment: comment)
   }
 }

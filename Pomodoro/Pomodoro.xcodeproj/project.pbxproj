@@ -12,8 +12,12 @@
 		8B05911D2B88E1C50017D5F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B05911C2B88E1C50017D5F5 /* Assets.xcassets */; };
 		8B0591202B88E1C50017D5F5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B05911F2B88E1C50017D5F5 /* Preview Assets.xcassets */; };
 		8B0591272B88E1DA0017D5F5 /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0591262B88E1DA0017D5F5 /* ClockView.swift */; };
+		8B40D4712B99CCF000268A84 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 8B40D4702B99CCF000268A84 /* Localizable.xcstrings */; };
+		8B40D4752B99E15200268A84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B40D4742B99E15200268A84 /* LaunchScreen.storyboard */; };
+		8B712D402B998AFA00C72CD6 /* ClockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B712D3F2B998AFA00C72CD6 /* ClockViewModel.swift */; };
 		8B736C8B2B93BB5D00C337C4 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B736C8A2B93BB5D00C337C4 /* NotificationService.swift */; };
 		8B736C8D2B93BCAB00C337C4 /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B736C8C2B93BCAB00C337C4 /* TimerViewModel.swift */; };
+		8BA650CF2B99ACFA00B18BBC /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA650CE2B99ACFA00B18BBC /* ProgressView.swift */; };
 		8BED9CA82B8F3ECD00B26FDF /* Neumorphic in Frameworks */ = {isa = PBXBuildFile; productRef = 8BED9CA72B8F3ECD00B26FDF /* Neumorphic */; };
 		8BED9CAF2B8F886E00B26FDF /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BED9CAE2B8F886E00B26FDF /* TimerView.swift */; };
 /* End PBXBuildFile section */
@@ -25,9 +29,13 @@
 		8B05911C2B88E1C50017D5F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B05911F2B88E1C50017D5F5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8B0591262B88E1DA0017D5F5 /* ClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockView.swift; sourceTree = "<group>"; };
+		8B40D4702B99CCF000268A84 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		8B40D4742B99E15200268A84 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8B712D3F2B998AFA00C72CD6 /* ClockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockViewModel.swift; sourceTree = "<group>"; };
 		8B736C8A2B93BB5D00C337C4 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		8B736C8C2B93BCAB00C337C4 /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
 		8B8E962B2B96970E004D3B58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8BA650CE2B99ACFA00B18BBC /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		8BED9CAE2B8F886E00B26FDF /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -46,6 +54,8 @@
 		8B05910C2B88E1C30017D5F5 = {
 			isa = PBXGroup;
 			children = (
+				8B40D4702B99CCF000268A84 /* Localizable.xcstrings */,
+				8B40D4742B99E15200268A84 /* LaunchScreen.storyboard */,
 				8B0591172B88E1C30017D5F5 /* Pomodoro */,
 				8B0591162B88E1C30017D5F5 /* Products */,
 			);
@@ -95,6 +105,7 @@
 			children = (
 				8B0591262B88E1DA0017D5F5 /* ClockView.swift */,
 				8BED9CAE2B8F886E00B26FDF /* TimerView.swift */,
+				8BA650CE2B99ACFA00B18BBC /* ProgressView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -102,6 +113,7 @@
 		8B736C882B93BA4500C337C4 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				8B712D3F2B998AFA00C72CD6 /* ClockViewModel.swift */,
 				8B736C8C2B93BCAB00C337C4 /* TimerViewModel.swift */,
 			);
 			path = ViewModel;
@@ -160,6 +172,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ko,
 			);
 			mainGroup = 8B05910C2B88E1C30017D5F5;
 			packageReferences = (
@@ -180,7 +193,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B0591202B88E1C50017D5F5 /* Preview Assets.xcassets in Resources */,
+				8B40D4752B99E15200268A84 /* LaunchScreen.storyboard in Resources */,
 				8B05911D2B88E1C50017D5F5 /* Assets.xcassets in Resources */,
+				8B40D4712B99CCF000268A84 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,9 +209,11 @@
 				8B0591272B88E1DA0017D5F5 /* ClockView.swift in Sources */,
 				8BED9CAF2B8F886E00B26FDF /* TimerView.swift in Sources */,
 				8B05911B2B88E1C30017D5F5 /* ContentView.swift in Sources */,
+				8B712D402B998AFA00C72CD6 /* ClockViewModel.swift in Sources */,
 				8B736C8B2B93BB5D00C337C4 /* NotificationService.swift in Sources */,
 				8B736C8D2B93BCAB00C337C4 /* TimerViewModel.swift in Sources */,
 				8B0591192B88E1C30017D5F5 /* PomodoroApp.swift in Sources */,
+				8BA650CF2B99ACFA00B18BBC /* ProgressView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,8 +356,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -374,8 +392,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
