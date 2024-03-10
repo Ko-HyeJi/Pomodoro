@@ -5,18 +5,18 @@
 <br><br><br>
 
 ## iPhone - light mode
-<img width="200" alt="light_1" src="https://github.com/Ko-HyeJi/Pomodoro/assets/88470545/415460cc-fe82-4f0b-8fdb-0e7e745867f2"> &nbsp;&nbsp;&nbsp;
-<img width="200" alt="light_2" src="https://github.com/Ko-HyeJi/Pomodoro/assets/88470545/c8b9fd7b-0431-4a1c-976a-afbbda246572"> &nbsp;&nbsp;&nbsp;
+<img width="200" alt="light_1" src="https://github.com/Ko-HyeJi/Pomodoro/assets/88470545/415460cc-fe82-4f0b-8fdb-0e7e745867f2"> &nbsp;&nbsp;
+<img width="200" alt="light_2" src="https://github.com/Ko-HyeJi/Pomodoro/assets/88470545/c8b9fd7b-0431-4a1c-976a-afbbda246572"> &nbsp;&nbsp;
 <img width="400" alt="light_3" src="https://github.com/Ko-HyeJi/Pomodoro/assets/88470545/853cd413-2ceb-41cd-b815-35ee3c728a7a">
 <br><br><br>
 
 
 ## iPhone - dark mode
-<img width="200" alt="dark_1" src="https://github.com/Ko-HyeJi/Pomodoro/assets/88470545/0e31c532-c4d8-41ad-af30-f2bea724a860"> &nbsp;&nbsp;&nbsp;
-<img width="200" alt="dark_2" src="https://github.com/Ko-HyeJi/Pomodoro/assets/88470545/1125de9e-8aa4-4c74-a2cb-913331180441"> &nbsp;&nbsp;&nbsp;
+<img width="200" alt="dark_1" src="https://github.com/Ko-HyeJi/Pomodoro/assets/88470545/0e31c532-c4d8-41ad-af30-f2bea724a860"> &nbsp;&nbsp;
+<img width="200" alt="dark_2" src="https://github.com/Ko-HyeJi/Pomodoro/assets/88470545/1125de9e-8aa4-4c74-a2cb-913331180441"> &nbsp;&nbsp;
 <img width="400" alt="dark_3" src="https://github.com/Ko-HyeJi/Pomodoro/assets/88470545/3f101a64-eec2-415f-8204-e67f0136ca18">
 <br><br><br>
 
 ## iPad
-<img width="400" alt="iPad_1" src="https://github.com/Ko-HyeJi/Pomodoro/assets/88470545/7ccb3157-2c41-46f9-b63b-d5d0b223c410"> &nbsp;&nbsp;&nbsp;
+<img width="400" alt="iPad_1" src="https://github.com/Ko-HyeJi/Pomodoro/assets/88470545/7ccb3157-2c41-46f9-b63b-d5d0b223c410"> &nbsp;&nbsp;
 <img width="400" alt="iPad_2" src="https://github.com/Ko-HyeJi/Pomodoro/assets/88470545/32b6debc-5157-4719-816f-0fd80c497930">
