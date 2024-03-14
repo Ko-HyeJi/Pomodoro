@@ -1,14 +1,22 @@
 # Pomodoro
+<img width="200" alt="AppIcon" src="https://github.com/Ko-HyeJi/Pomodoro/assets/88470545/7d2a2610-c74b-4e09-b977-4b6053f8bb0d">
+&nbsp;&nbsp;&nbsp;
+<a href="https://apps.apple.com/kr/app/%EB%BD%80%EB%AA%A8%EB%8F%84%EB%A1%9C-%ED%8F%AC%EC%BB%A4%EC%8A%A4-%ED%83%80%EC%9D%B4%EB%A8%B8/id6478905830"><img width="150" alt="AppStore" src="https://github.com/Ko-HyeJi/Pomodoro/assets/88470545/ce4f7fd5-d9ee-4ecf-92eb-074f5e8e4f47"></a>
+<br><br><br>
+
 ## iPhone - light mode
-<img width="200" alt="light_1" src="https://github.com/Ko-HyeJi/Pomodoro/assets/88470545/eebd1165-337b-446f-8a05-1211892396e5">
-<img width="200" alt="light_2" src="https://github.com/Ko-HyeJi/Pomodoro/assets/88470545/79e77b20-2422-48cb-b508-682022d22de8">
-<img width="400" alt="light_landscape" src="https://github.com/Ko-HyeJi/Pomodoro/assets/88470545/37db458c-b71f-46ad-8897-568984fe2265">
+<img width="200" alt="light_1" src="https://github.com/Ko-HyeJi/Pomodoro/assets/88470545/415460cc-fe82-4f0b-8fdb-0e7e745867f2"> &nbsp;
+<img width="200" alt="light_2" src="https://github.com/Ko-HyeJi/Pomodoro/assets/88470545/c8b9fd7b-0431-4a1c-976a-afbbda246572"> &nbsp;
+<img width="400" alt="light_3" src="https://github.com/Ko-HyeJi/Pomodoro/assets/88470545/853cd413-2ceb-41cd-b815-35ee3c728a7a">
+<br><br><br>
+
 
 ## iPhone - dark mode
-<img width="200" alt="dark_1" src="https://github.com/Ko-HyeJi/Pomodoro/assets/88470545/5e257f7b-02cd-451f-b1df-b467e995103d">
-<img width="200" alt="dark_2" src="https://github.com/Ko-HyeJi/Pomodoro/assets/88470545/98b3a9d2-c2ea-4b7c-8200-ffa252a4a517">
-<img width="400" alt="dark_landscape" src="https://github.com/Ko-HyeJi/Pomodoro/assets/88470545/637c0522-1051-471b-b05d-249764132d71">
+<img width="200" alt="dark_1" src="https://github.com/Ko-HyeJi/Pomodoro/assets/88470545/0e31c532-c4d8-41ad-af30-f2bea724a860"> &nbsp;
+<img width="200" alt="dark_2" src="https://github.com/Ko-HyeJi/Pomodoro/assets/88470545/1125de9e-8aa4-4c74-a2cb-913331180441"> &nbsp;
+<img width="400" alt="dark_3" src="https://github.com/Ko-HyeJi/Pomodoro/assets/88470545/3f101a64-eec2-415f-8204-e67f0136ca18">
+<br><br><br>
 
 ## iPad
-<img width="335" alt="iPad_portrait" src="https://github.com/Ko-HyeJi/Pomodoro/assets/88470545/6d57dfd6-265f-4fdd-add8-0e29ed1c3d16">
-<img width="465" alt="iPad_landscape" src="https://github.com/Ko-HyeJi/Pomodoro/assets/88470545/6a05ad30-06fa-4dd1-ad8d-a85983e67dc8">
+<img width="400" alt="iPad_1" src="https://github.com/Ko-HyeJi/Pomodoro/assets/88470545/7ccb3157-2c41-46f9-b63b-d5d0b223c410"> &nbsp;
+<img width="400" alt="iPad_2" src="https://github.com/Ko-HyeJi/Pomodoro/assets/88470545/32b6debc-5157-4719-816f-0fd80c497930">
