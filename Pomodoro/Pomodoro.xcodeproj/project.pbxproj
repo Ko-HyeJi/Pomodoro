@@ -134,8 +134,8 @@
 		8B736C892B93BA5500C337C4 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				8B736C8A2B93BB5D00C337C4 /* NotificationService.swift */,
 				8BF70BEC2BA421C6000AFBD4 /* TimerService.swift */,
+				8B736C8A2B93BB5D00C337C4 /* NotificationService.swift */,
 				8BF70BEE2BA4242C000AFBD4 /* ScenePhaseManager.swift */,
 				8BF70BF62BA43BA2000AFBD4 /* OrientationManager.swift */,
 			);

@@ -9,48 +9,60 @@ import SwiftUI
 
 struct ButtonView: View {
   @EnvironmentObject var timer: TimerService
-  @Binding var showHandle: Bool
-  let haptic = UISelectionFeedbackGenerator()
   
   var body: some View {
-    Group {
-      if timer.state != .running {
-        Button {
-          timer.start()
-          haptic.selectionChanged()
-          withAnimation(.easeOut(duration: 0.2)) { showHandle = false }
-        } label: {
-          RoundedRectangle(cornerRadius: 25.0)
-            .softOuterShadow(darkShadow: .darkShadow, lightShadow: .lightShadow)
-            .overlay {
-              Image(systemName: "play.fill")
-                .font(.title)
-                .foregroundStyle(Color.text)
-            }
-        }
-        .disabled(timer.counter == 0)
-      } else {
-        Button {
-          timer.pause()
-          haptic.selectionChanged()
-          withAnimation(.easeIn(duration: 0.2)) { showHandle = true }
-        } label: {
-          RoundedRectangle(cornerRadius: 25.0)
-            .softInnerShadow(RoundedRectangle(cornerRadius: 25.0), darkShadow: .darkShadow, lightShadow: .lightShadow)
-            .overlay {
-              Image(systemName: "pause.fill")
-                .font(.title)
-                .foregroundStyle(Color.text)
-            }
-        }
+    if timer.state != .running {
+      Button {
+        action { timer.start() }
+      } label: {
+        startLabel
+      }
+      .disabled(timer.counter == 0)
+    } else {
+      Button {
+        action { timer.pause() }
+      } label: {
+        pauseLabel
       }
     }
-    .frame(height: 60)
-    .foregroundStyle(Color.main)
+  }
+}
+
+extension ButtonView {
+  private var startLabel: some View {
+    RoundedRectangle(cornerRadius: 25.0)
+      .softOuterShadow(darkShadow: .darkShadow, lightShadow: .lightShadow)
+      .overlay {
+        Image(systemName: "play.fill")
+          .font(.title)
+          .foregroundStyle(Color.text)
+      }
+      .frame(height: 60)
+      .foregroundStyle(Color.main)
+  }
+  
+  private var pauseLabel: some View {
+    RoundedRectangle(cornerRadius: 25.0)
+      .softInnerShadow(RoundedRectangle(cornerRadius: 25.0), darkShadow: .darkShadow, lightShadow: .lightShadow)
+      .overlay {
+        Image(systemName: "pause.fill")
+          .font(.title)
+          .foregroundStyle(Color.text)
+      }
+      .frame(height: 60)
+      .foregroundStyle(Color.main)
+  }
+  
+  private func action(_ action: () -> ()) {
+    let haptic = UISelectionFeedbackGenerator()
+    return withAnimation(.easeIn(duration: 0.2)) {
+      action()
+      haptic.selectionChanged()
+    }
   }
 }
 
 #Preview {
-  ButtonView(showHandle: .constant(true))
+  ButtonView()
     .environmentObject(TimerService())
 }

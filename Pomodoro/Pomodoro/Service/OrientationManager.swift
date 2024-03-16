@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-final class OrientationManager {
-  let screenSize = UIScreen.main.bounds.width
+final class OrientationManager: ObservableObject {
+  @Published var screenSize = min(UIScreen.main.bounds.width, UIScreen.main.bounds.height)
   
-  func state(_ geometry: GeometryProxy) -> Orientation {
+  func currentState(_ geometry: GeometryProxy) -> Orientation {
     if geometry.size.width < geometry.size.height {
       return Orientation.portrait
     } else {

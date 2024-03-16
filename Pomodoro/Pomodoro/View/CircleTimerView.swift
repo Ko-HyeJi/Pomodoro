@@ -6,12 +6,10 @@
 //
 
 import SwiftUI
-import Neumorphic
 
 struct CircleTimerView: View {
   @EnvironmentObject var timer: TimerService
-  @Binding var showHandle: Bool
-  @Binding var UIWidth: CGFloat
+  @EnvironmentObject var orientation: OrientationManager
   let haptic = UISelectionFeedbackGenerator()
   
   var body: some View {
@@ -20,12 +18,12 @@ struct CircleTimerView: View {
       ClockProgressView()
       GeometryReader { geometry in
         ClockLabelView(geometry: geometry)
-        HandleView(showHandle: $showHandle, geometry: geometry)
+        HandleView(geometry: geometry)
       }
       centerCircle
         .onTapGesture { centerCircleAction() }
     }
-    .frame(width: UIWidth * 0.76, height: UIWidth * 0.76)
+    .frame(width: orientation.screenSize * 0.76, height: orientation.screenSize * 0.76)
     .onChange(of: timer.counter) {
       if timer.state != .running {
         haptic.selectionChanged()
@@ -45,8 +43,8 @@ private extension CircleTimerView {
         .softOuterShadow(darkShadow: .darkShadow, lightShadow: .lightShadow)
       Rectangle()
         .foregroundStyle(Color(UIColor.systemBackground).opacity(0.3))
-        .frame(width: 0.5, height: UIWidth * 0.38)
-        .offset(y: -UIWidth * 0.18)
+        .frame(width: 0.5, height: orientation.screenSize * 0.38)
+        .offset(y: -orientation.screenSize * 0.18)
         .shadow(color: .darkShadow, radius: -0.5, x: 1.5)
     }
   }
@@ -54,7 +52,7 @@ private extension CircleTimerView {
   private var centerCircle: some View {
     Circle()
       .foregroundStyle(Color.main)
-      .frame(width: UIWidth * 0.15)
+      .frame(width: orientation.screenSize * 0.15)
       .shadow(color: .darkShadow, radius: 2, x: 2, y: 2)
   }
   
@@ -72,6 +70,6 @@ private extension CircleTimerView {
 }
 
 #Preview {
-  CircleTimerView(showHandle: .constant(true), UIWidth: .constant(UIScreen.main.bounds.width))
+  CircleTimerView()
     .environmentObject(TimerService())
 }

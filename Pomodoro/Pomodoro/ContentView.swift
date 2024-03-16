@@ -6,16 +6,15 @@
 //
 
 import SwiftUI
+import Neumorphic
 
 struct ContentView: View {
   @EnvironmentObject var timer: TimerService
-  @State var showHandle = true
-  @State var UIWidth = UIScreen.main.bounds.width
-  let orientation = OrientationManager()
+  @EnvironmentObject var orientation: OrientationManager
   
   var body: some View {
     GeometryReader { geometry in
-      switch orientation.state(geometry) {
+      switch orientation.currentState(geometry) {
       case .portrait:
         portraitView
       case .landscape:
@@ -35,16 +34,15 @@ extension ContentView {
         Spacer()
         TextTimerView()
         Spacer()
-        CircleTimerView(showHandle: $showHandle, UIWidth: $UIWidth)
+        CircleTimerView()
         Spacer()
-        ButtonView(showHandle: $showHandle)
+        ButtonView()
           .frame(maxWidth: 500)
-          .frame(width: UIWidth * 0.76)
+          .frame(width: orientation.screenSize * 0.76)
         Spacer()
       }
       Spacer()
     }
-    .onAppear { UIWidth = UIScreen.main.bounds.width }
   }
   
   private var landscapeView: some View {
@@ -52,25 +50,24 @@ extension ContentView {
       Spacer()
       HStack {
         Spacer()
-        CircleTimerView(showHandle: $showHandle, UIWidth: $UIWidth)
-          .padding(UIWidth * 0.08)
+        CircleTimerView()
+          .padding(orientation.screenSize * 0.08)
         Spacer()
         VStack(spacing: 30) {
           TextTimerView()
-          ButtonView(showHandle: $showHandle)
+          ButtonView()
             .frame(maxWidth: 300)
-            .frame(width: UIWidth * 0.4)
+            .frame(width: orientation.screenSize * 0.4)
         }
         Spacer()
       }
       Spacer()
     }
-    .ignoresSafeArea()
-    .onAppear { UIWidth = UIScreen.main.bounds.height }
   }
 }
 
 #Preview {
   ContentView()
     .environmentObject(TimerService())
+    .environmentObject(OrientationManager())
 }

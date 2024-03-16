@@ -6,11 +6,9 @@
 //
 
 import SwiftUI
-import Neumorphic
 
 struct HandleView: View {
   @EnvironmentObject var timer: TimerService
-  @Binding var showHandle: Bool
   @State private var dragOffset: CGFloat = 0
   @State private var minute: Int = 0
   let geometry: GeometryProxy
@@ -32,7 +30,7 @@ struct HandleView: View {
       .shadow(radius: 1)
     
     return Group {
-      if showHandle {
+      if timer.state != .running {
         handle
       }
       stick
@@ -56,7 +54,7 @@ struct HandleView: View {
 
 #Preview {
   GeometryReader { geometry in
-    HandleView(showHandle: .constant(true), geometry: geometry)
+    HandleView(geometry: geometry)
       .environmentObject(TimerService())
   }
   .background(Circle().foregroundStyle(.green))
