@@ -1,5 +1,5 @@
 //
-//  TimerView.swift
+//  HandleView.swift
 //  Pomodoro
 //
 //  Created by 고혜지 on 2/29/24.
@@ -8,15 +8,15 @@
 import SwiftUI
 import Neumorphic
 
-struct TimerView: View {
-  let geometry: GeometryProxy
-  @Binding var selectedSecond: Int
+struct HandleView: View {
+  @EnvironmentObject var timer: TimerService
+  @Binding var showHandle: Bool
   @State private var dragOffset: CGFloat = 0
   @State private var minute: Int = 0
-  @Binding var showHandle: Bool
+  let geometry: GeometryProxy
   
   var body: some View {
-    let percentage: CGFloat = CGFloat(selectedSecond) / 3600
+    let percentage: CGFloat = CGFloat(timer.counter) / 3600
     
     let stick = RoundedRectangle(cornerRadius: 100)
       .shadow(color: .darkShadow, radius: 2, x: 2, y: 2)
@@ -45,24 +45,20 @@ struct TimerView: View {
         let angle = atan2(vector.dx, vector.dy) * 180 / .pi
         var newDragOffset = 360 - (angle - 180)
         if newDragOffset >= 360 { newDragOffset -= 360 }
-//        let minute = (newDragOffset / 360 * 60).rounded()
-//        if abs(newDragOffset - dragOffset) <= 180 {
-//          dragOffset = newDragOffset
-//          selectedSecond = Int(minute * 60)
-//        }
-
-//        let newMinute = Int((newDragOffset / 360 * 60).rounded())
-//        if abs(newMinute - minute) < 10 {
-//          print(minute, newMinute)
-//          dragOffset = newDragOffset
-//          minute = newMinute
-//          selectedSecond = Int(minute * 60)
-//        }
-        
         dragOffset = newDragOffset
         minute = Int((newDragOffset / 360 * 60).rounded())
-        selectedSecond = minute * 60
-        
+        if timer.state != .running {
+          timer.set(to: minute * 60)
+        }
       })
   }
+}
+
+#Preview {
+  GeometryReader { geometry in
+    HandleView(showHandle: .constant(true), geometry: geometry)
+      .environmentObject(TimerService())
+  }
+  .background(Circle().foregroundStyle(.green))
+  .frame(width: UIScreen.main.bounds.width * 0.76)
 }

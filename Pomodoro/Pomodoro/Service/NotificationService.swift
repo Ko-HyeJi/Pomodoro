@@ -8,7 +8,7 @@
 import NotificationCenter
 import SwiftUI
 
-class NotificationService {
+final class NotificationService {
   static let shared = NotificationService()
   
   private let center = UNUserNotificationCenter.current()

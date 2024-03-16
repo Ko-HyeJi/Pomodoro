@@ -1,17 +1,10 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "%@:%@" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "%1$@:%2$@"
-          }
-        }
-      }
-    },
     "%lld" : {
+
+    },
+    "count" : {
 
     },
     "Pomodoro" : {
@@ -72,9 +65,6 @@
           }
         }
       }
-    },
-    "Usage" : {
-
     },
     "Your timer has ended." : {
       "extractionState" : "manual",

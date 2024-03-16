@@ -1,4 +1,5 @@
 {
+  "originHash" : "9f91e4f81ede77417336265aa28e271457fee48268566f92c0d3fbc958f3f50b",
   "pins" : [
     {
       "identity" : "neumorphic",
@@ -10,5 +11,5 @@
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }
