@@ -23,22 +23,23 @@ struct ClockLabelView: View {
             .offset(y: (-geometry.size.width / 2) + (length / 2))
           
           if tick % 5 == 0 {
-            Text("\(tick)")
-              .padding(30)
-              .rotationEffect(.degrees(Double(tick) * -6))
-              .offset(y: -geometry.size.width * 0.57)
-              .font(device == .pad ? .title2.bold() : .caption)
-              .onTapGesture {
-                withAnimation {
-                  if timer.state != .running {
-                    if tick == 0 {
-                      timer.set(to: 3_600)
-                    } else {
-                      timer.set(to: tick * 60)
-                    }
+            Button {
+              withAnimation {
+                if timer.state != .running {
+                  if tick == 0 {
+                    timer.set(to: 3_600)
+                  } else {
+                    timer.set(to: tick * 60)
                   }
                 }
               }
+            } label: {
+              Text("\(tick)")
+                .padding(30)
+                .rotationEffect(.degrees(Double(tick) * -6))
+                .font(device == .pad ? .title2.bold() : .caption)
+            }
+            .offset(y: -geometry.size.width * 0.57)
           }
         }
         .foregroundStyle(Color.text)

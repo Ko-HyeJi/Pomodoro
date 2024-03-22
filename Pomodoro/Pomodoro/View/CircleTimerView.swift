@@ -72,4 +72,5 @@ private extension CircleTimerView {
 #Preview {
   CircleTimerView()
     .environmentObject(TimerService())
+    .environmentObject(OrientationManager())
 }
