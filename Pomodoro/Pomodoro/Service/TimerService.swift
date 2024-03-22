@@ -5,7 +5,7 @@
 //  Created by 고혜지 on 3/15/24.
 //
 
-import Foundation
+import SwiftUI
 import Combine
 import AVFoundation
 
@@ -15,7 +15,7 @@ final class TimerService: ObservableObject {
   @Published var state: TimerState = .stopped
   @Published private(set) var counter = 0
   private var subscription: AnyCancellable?
-  var latestSetTime = 0
+  @AppStorage("LatestSetTime") var latestSetTime = 0
   
   private func cancelSubscription() {
     self.subscription?.cancel()
