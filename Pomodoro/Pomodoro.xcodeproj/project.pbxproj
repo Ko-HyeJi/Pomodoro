@@ -26,6 +26,7 @@
 		8BF70BF72BA43BA2000AFBD4 /* OrientationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF70BF62BA43BA2000AFBD4 /* OrientationManager.swift */; };
 		8BF70BF92BA44EE7000AFBD4 /* TextTimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF70BF82BA44EE7000AFBD4 /* TextTimerViewModel.swift */; };
 		8BF70BFE2BAEEF99000AFBD4 /* CircleTimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF70BFD2BAEEF99000AFBD4 /* CircleTimerViewModel.swift */; };
+		8BF70C002BAEF2A4000AFBD4 /* ButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF70BFF2BAEF2A4000AFBD4 /* ButtonViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		8BF70BF62BA43BA2000AFBD4 /* OrientationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrientationManager.swift; sourceTree = "<group>"; };
 		8BF70BF82BA44EE7000AFBD4 /* TextTimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTimerViewModel.swift; sourceTree = "<group>"; };
 		8BF70BFD2BAEEF99000AFBD4 /* CircleTimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleTimerViewModel.swift; sourceTree = "<group>"; };
+		8BF70BFF2BAEF2A4000AFBD4 /* ButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 			children = (
 				8BF70BF82BA44EE7000AFBD4 /* TextTimerViewModel.swift */,
 				8BF70BFD2BAEEF99000AFBD4 /* CircleTimerViewModel.swift */,
+				8BF70BFF2BAEF2A4000AFBD4 /* ButtonViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 				8BF70BF72BA43BA2000AFBD4 /* OrientationManager.swift in Sources */,
 				8BF70BF32BA42C18000AFBD4 /* ButtonView.swift in Sources */,
 				8B05911B2B88E1C30017D5F5 /* ContentView.swift in Sources */,
+				8BF70C002BAEF2A4000AFBD4 /* ButtonViewModel.swift in Sources */,
 				8B736C8B2B93BB5D00C337C4 /* NotificationService.swift in Sources */,
 				8BF70BEF2BA4242C000AFBD4 /* ScenePhaseManager.swift in Sources */,
 				8B0591192B88E1C30017D5F5 /* PomodoroApp.swift in Sources */,

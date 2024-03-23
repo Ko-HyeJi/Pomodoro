@@ -8,9 +8,9 @@
 import Foundation
 import SwiftUI
 
-final class CircleTimerViewModel: ObservableObject {
-  let haptic = UISelectionFeedbackGenerator()
-  let timer = TimerService.shared
+final class CircleTimerViewModel {
+  private let haptic = UISelectionFeedbackGenerator()
+  private let timer = TimerService.shared
   
   func saveTimeAndGenerateHaptic() {
     if timer.state != .running {

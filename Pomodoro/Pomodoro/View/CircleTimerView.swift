@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct CircleTimerView: View {
-  @EnvironmentObject var timer: TimerService
-  @EnvironmentObject var orientation: OrientationManager
-  @StateObject var viewModel = CircleTimerViewModel()
+  @EnvironmentObject private var timer: TimerService
+  @EnvironmentObject private var orientation: OrientationManager
+  private var viewModel = CircleTimerViewModel()
   
   var body: some View {
     ZStack {
