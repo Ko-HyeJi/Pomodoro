@@ -8,49 +8,42 @@
 import SwiftUI
 
 struct ButtonView: View {
-  @EnvironmentObject var timer: TimerService
+  private var viewModel = ButtonViewModel()
+  private let radiusSize = 25.0
+  private let buttonHeight = 60.0
   
   var body: some View {
-    if timer.state != .running {
-      Button {
-        action { timer.start() }
-      } label: {
-        startLabel
-      }
-      .disabled(timer.counter == 0)
-    } else {
-      Button {
-        action { timer.pause() }
-      } label: {
-        pauseLabel
+    Button {
+      action { viewModel.buttonAction }
+    } label: {
+      switch viewModel.state {
+      case .play:
+        RoundedRectangle(cornerRadius: radiusSize)
+          .softOuterShadow(
+            darkShadow: .darkShadow,
+            lightShadow: .lightShadow
+          )
+      case .pause:
+        RoundedRectangle(cornerRadius: radiusSize)
+          .softInnerShadow(
+            RoundedRectangle(cornerRadius: radiusSize),
+            darkShadow: .darkShadow,
+            lightShadow: .lightShadow
+          )
       }
     }
+    .frame(height: buttonHeight)
+    .foregroundStyle(Color.main)
+    .overlay(image(viewModel.imageName))
+    .disabled(viewModel.isButtonDisabled)
   }
 }
 
 extension ButtonView {
-  private var startLabel: some View {
-    RoundedRectangle(cornerRadius: 25.0)
-      .softOuterShadow(darkShadow: .darkShadow, lightShadow: .lightShadow)
-      .overlay {
-        Image(systemName: "play.fill")
-          .font(.title)
-          .foregroundStyle(Color.text)
-      }
-      .frame(height: 60)
-      .foregroundStyle(Color.main)
-  }
-  
-  private var pauseLabel: some View {
-    RoundedRectangle(cornerRadius: 25.0)
-      .softInnerShadow(RoundedRectangle(cornerRadius: 25.0), darkShadow: .darkShadow, lightShadow: .lightShadow)
-      .overlay {
-        Image(systemName: "pause.fill")
-          .font(.title)
-          .foregroundStyle(Color.text)
-      }
-      .frame(height: 60)
-      .foregroundStyle(Color.main)
+  private func image(_ imageName: String) -> some View {
+    Image(systemName: imageName)
+      .dynamicTypeSize(.xxxLarge)
+      .foregroundStyle(Color.text)
   }
   
   private func action(_ action: () -> ()) {
