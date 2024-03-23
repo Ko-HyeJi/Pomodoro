@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct TextTimerView: View {
-  @EnvironmentObject var timer: TimerService
-  @StateObject private var viewModel = TextTimerViewModel()
+  private var viewModel = TextTimerViewModel()
   
   var body: some View {
     Text(viewModel.time)

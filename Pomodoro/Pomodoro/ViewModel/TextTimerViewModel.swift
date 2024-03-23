@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class TextTimerViewModel: ObservableObject {
+final class TextTimerViewModel {
   private let timer = TimerService.shared
   private var minutes: String { formatter(timer.counter / 60) }
   private var seconds: String { formatter(timer.counter % 60) }
