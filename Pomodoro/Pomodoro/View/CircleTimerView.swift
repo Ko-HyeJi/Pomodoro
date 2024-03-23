@@ -10,7 +10,7 @@ import SwiftUI
 struct CircleTimerView: View {
   @EnvironmentObject var timer: TimerService
   @EnvironmentObject var orientation: OrientationManager
-  let haptic = UISelectionFeedbackGenerator()
+  @StateObject var viewModel = CircleTimerViewModel()
   
   var body: some View {
     ZStack {
@@ -21,17 +21,10 @@ struct CircleTimerView: View {
         HandleView(geometry: geometry)
       }
       centerCircle
-        .onTapGesture { centerCircleAction() }
+        .onTapGesture { viewModel.centerCircleAction() }
     }
     .frame(width: orientation.screenSize * 0.76, height: orientation.screenSize * 0.76)
-    .onChange(of: timer.counter) {
-      if timer.state != .running {
-        haptic.selectionChanged()
-        if timer.counter != 0 {
-          timer.latestSetTime = timer.counter
-        }
-      }
-    }
+    .onChange(of: timer.counter) { viewModel.saveTimeAndGenerateHaptic() }
   }
 }
 
@@ -48,24 +41,12 @@ private extension CircleTimerView {
         .shadow(color: .darkShadow, radius: -0.5, x: 1.5)
     }
   }
-
+  
   private var centerCircle: some View {
     Circle()
       .foregroundStyle(Color.main)
       .frame(width: orientation.screenSize * 0.15)
       .shadow(color: .darkShadow, radius: 2, x: 2, y: 2)
-  }
-  
-  private func centerCircleAction() {
-    if timer.state != .running {
-      withAnimation {
-        if timer.counter == 0 {
-          timer.set(to: timer.latestSetTime)
-        } else {
-          timer.set(to: 0)
-        }
-      }
-    }
   }
 }
 

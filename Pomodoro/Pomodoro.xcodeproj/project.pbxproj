@@ -25,6 +25,7 @@
 		8BF70BF52BA43A91000AFBD4 /* ClockLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF70BF42BA43A91000AFBD4 /* ClockLabelView.swift */; };
 		8BF70BF72BA43BA2000AFBD4 /* OrientationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF70BF62BA43BA2000AFBD4 /* OrientationManager.swift */; };
 		8BF70BF92BA44EE7000AFBD4 /* TextTimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF70BF82BA44EE7000AFBD4 /* TextTimerViewModel.swift */; };
+		8BF70BFE2BAEEF99000AFBD4 /* CircleTimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF70BFD2BAEEF99000AFBD4 /* CircleTimerViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		8BF70BF42BA43A91000AFBD4 /* ClockLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockLabelView.swift; sourceTree = "<group>"; };
 		8BF70BF62BA43BA2000AFBD4 /* OrientationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrientationManager.swift; sourceTree = "<group>"; };
 		8BF70BF82BA44EE7000AFBD4 /* TextTimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTimerViewModel.swift; sourceTree = "<group>"; };
+		8BF70BFD2BAEEF99000AFBD4 /* CircleTimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleTimerViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				8BF70BF82BA44EE7000AFBD4 /* TextTimerViewModel.swift */,
+				8BF70BFD2BAEEF99000AFBD4 /* CircleTimerViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 				8BF70BF52BA43A91000AFBD4 /* ClockLabelView.swift in Sources */,
 				8BF70BED2BA421C6000AFBD4 /* TimerService.swift in Sources */,
 				8BA650CF2B99ACFA00B18BBC /* ClockProgressView.swift in Sources */,
+				8BF70BFE2BAEEF99000AFBD4 /* CircleTimerViewModel.swift in Sources */,
 				8BF70BF12BA42BFF000AFBD4 /* TextTimerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
