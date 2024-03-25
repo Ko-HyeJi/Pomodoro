@@ -43,17 +43,20 @@ final class TimerService: ObservableObject {
         }
       }
     self.state = .running
+    UIApplication.shared.isIdleTimerDisabled = true
   }
   
   func pause() {
     self.cancelSubscription()
     self.state = .paused
+    UIApplication.shared.isIdleTimerDisabled = false
   }
   
   func stop() {
     self.cancelSubscription()
     self.subscription = nil
     self.state = .stopped
+    UIApplication.shared.isIdleTimerDisabled = false
   }
   
   func playSystemSound() {
