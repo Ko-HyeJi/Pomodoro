@@ -10,8 +10,8 @@ import SwiftUI
 final class ScenePhaseManager {
   private let notification = NotificationService.shared
   private let timer = TimerService.shared
-  private var saveDate: Date?
-  private var saveTime: Int?
+  private var savedDate: Date?
+  private var savedTime: Int?
   
   // TODO: 함수명 뭘로하지?
   func action(_ scenePhase: ScenePhase) {
@@ -27,16 +27,19 @@ final class ScenePhaseManager {
   
   private func background() {
     if timer.state == .running {
-      saveDate = Date()
-      saveTime = timer.counter
-      notification.setTimerEndNotification(after: timer.counter)
+      savedDate = Date()
+      savedTime = timer.counter
+      notification.setNotification(after: timer.counter)
     }
   }
 
   private func active() {
-    withAnimation {
-      if let saveDate = saveDate, let saveTime = saveTime {
-        timer.set(to: saveTime - Int(Date().timeIntervalSince(saveDate)))
+    if timer.state == .running {
+      notification.cancelNotification()
+      withAnimation {
+        if let savedDate = savedDate, let savedTime = savedTime {
+          timer.set(to: savedTime - Int(Date().timeIntervalSince(savedDate)))
+        }
       }
     }
   }

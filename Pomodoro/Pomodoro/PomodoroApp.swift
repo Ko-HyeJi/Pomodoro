@@ -9,8 +9,6 @@ import SwiftUI
 
 @main
 struct PomodoroApp: App {
-  @StateObject var timer = TimerService.shared
-  @StateObject var orientation = OrientationManager()
   @Environment(\.scenePhase) private var scenePhase
   let scenePhaseManager = ScenePhaseManager()
   let notification = NotificationService.shared
@@ -20,8 +18,8 @@ struct PomodoroApp: App {
       ContentView()
         .onAppear { notification.requestAuthorization() }
     }
-    .environmentObject(timer)
-    .environmentObject(orientation)
+    .environmentObject(TimerService.shared)
+    .environmentObject(OrientationManager())
     .onChange(of: scenePhase) { scenePhaseManager.action(scenePhase) }
   }
 }

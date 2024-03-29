@@ -19,7 +19,7 @@ final class NotificationService {
     }
   }
   
-  func setTimerEndNotification(after timerInterval: Int) {
+  func setNotification(after timerInterval: Int) {
     let content = UNMutableNotificationContent()
     content.title = "Pomodoro".localized()
     content.body = "Your timer has ended.".localized()
@@ -31,7 +31,11 @@ final class NotificationService {
     let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: false)
     
     let request = UNNotificationRequest(identifier: "timerEnd", content: content, trigger: trigger)
-    UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+    center.add(request, withCompletionHandler: nil)
+  }
+  
+  func cancelNotification() {
+    center.removePendingNotificationRequests(withIdentifiers: ["timerEnd"])
   }
 }
 
