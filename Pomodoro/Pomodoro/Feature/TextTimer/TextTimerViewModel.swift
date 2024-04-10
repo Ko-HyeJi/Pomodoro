@@ -13,6 +13,10 @@ final class TextTimerViewModel {
   private var seconds: String { formatter(timer.counter % 60) }
   var time: String { "\(minutes):\(seconds)" }
   
+  func getTime() -> String{
+    return time
+  }
+  
   private func formatter(_ num: Int) -> String {
     return String(format: "%02d", num)
   }

@@ -1,5 +1,5 @@
 //
-//  ButtonViewModel.swift
+//  ControlButtonViewModel.swift
 //  Pomodoro
 //
 //  Created by 고혜지 on 3/23/24.
@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-final class ButtonViewModel {
+final class ControlButtonViewModel {
   private var timer = TimerService.shared
   var state: ButtonState { timer.state != .running ? .play : .pause }
   var isButtonDisabled: Bool { timer.counter == 0 }

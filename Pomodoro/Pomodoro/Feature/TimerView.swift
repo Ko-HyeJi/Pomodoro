@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  TimerView.swift
 //  Pomodoro
 //
 //  Created by 고혜지 on 2/23/24.
@@ -8,7 +8,7 @@
 import SwiftUI
 import Neumorphic
 
-struct ContentView: View {
+struct TimerView: View {
   @EnvironmentObject var timer: TimerService
   @EnvironmentObject var orientation: OrientationManager
   
@@ -26,7 +26,7 @@ struct ContentView: View {
   }
 }
 
-extension ContentView {
+extension TimerView {
   private var portraitView: some View {
     HStack {
       Spacer()
@@ -34,9 +34,9 @@ extension ContentView {
         Spacer()
         TextTimerView()
         Spacer()
-        CircleTimerView()
+        CircularTimerView()
         Spacer()
-        ButtonView()
+        ControlButtonView()
           .frame(maxWidth: 500)
           .frame(width: orientation.screenSize * 0.76)
         Spacer()
@@ -50,12 +50,12 @@ extension ContentView {
       Spacer()
       HStack {
         Spacer()
-        CircleTimerView()
+        CircularTimerView()
           .padding(orientation.screenSize * 0.08)
         Spacer()
         VStack(spacing: 30) {
           TextTimerView()
-          ButtonView()
+          ControlButtonView()
             .frame(maxWidth: 300)
             .frame(width: orientation.screenSize * 0.4)
         }
@@ -67,7 +67,7 @@ extension ContentView {
 }
 
 #Preview {
-  ContentView()
+  TimerView()
     .environmentObject(TimerService())
     .environmentObject(OrientationManager())
 }

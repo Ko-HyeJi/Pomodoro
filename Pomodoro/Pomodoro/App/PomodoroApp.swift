@@ -15,7 +15,7 @@ struct PomodoroApp: App {
   
   var body: some Scene {
     WindowGroup {
-      ContentView()
+      TimerView()
         .onAppear { notification.requestAuthorization() }
     }
     .environmentObject(TimerService.shared)

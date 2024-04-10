@@ -8,49 +8,51 @@
 
 /* Begin PBXBuildFile section */
 		8B0591192B88E1C30017D5F5 /* PomodoroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0591182B88E1C30017D5F5 /* PomodoroApp.swift */; };
-		8B05911B2B88E1C30017D5F5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B05911A2B88E1C30017D5F5 /* ContentView.swift */; };
+		8B05911B2B88E1C30017D5F5 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B05911A2B88E1C30017D5F5 /* TimerView.swift */; };
 		8B05911D2B88E1C50017D5F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B05911C2B88E1C50017D5F5 /* Assets.xcassets */; };
 		8B0591202B88E1C50017D5F5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B05911F2B88E1C50017D5F5 /* Preview Assets.xcassets */; };
-		8B0591272B88E1DA0017D5F5 /* CircleTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0591262B88E1DA0017D5F5 /* CircleTimerView.swift */; };
+		8B0591272B88E1DA0017D5F5 /* CircularTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0591262B88E1DA0017D5F5 /* CircularTimerView.swift */; };
 		8B40D4712B99CCF000268A84 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 8B40D4702B99CCF000268A84 /* Localizable.xcstrings */; };
 		8B40D4752B99E15200268A84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B40D4742B99E15200268A84 /* LaunchScreen.storyboard */; };
 		8B736C8B2B93BB5D00C337C4 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B736C8A2B93BB5D00C337C4 /* NotificationService.swift */; };
-		8BA650CF2B99ACFA00B18BBC /* ClockProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA650CE2B99ACFA00B18BBC /* ClockProgressView.swift */; };
+		8B8ED1072BB6FCED009DD699 /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8ED1062BB6FCED009DD699 /* View+.swift */; };
+		8BA650CF2B99ACFA00B18BBC /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA650CE2B99ACFA00B18BBC /* ProgressView.swift */; };
 		8BED9CA82B8F3ECD00B26FDF /* Neumorphic in Frameworks */ = {isa = PBXBuildFile; productRef = 8BED9CA72B8F3ECD00B26FDF /* Neumorphic */; };
 		8BED9CAF2B8F886E00B26FDF /* HandleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BED9CAE2B8F886E00B26FDF /* HandleView.swift */; };
 		8BF70BED2BA421C6000AFBD4 /* TimerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF70BEC2BA421C6000AFBD4 /* TimerService.swift */; };
 		8BF70BEF2BA4242C000AFBD4 /* ScenePhaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF70BEE2BA4242C000AFBD4 /* ScenePhaseManager.swift */; };
 		8BF70BF12BA42BFF000AFBD4 /* TextTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF70BF02BA42BFF000AFBD4 /* TextTimerView.swift */; };
-		8BF70BF32BA42C18000AFBD4 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF70BF22BA42C18000AFBD4 /* ButtonView.swift */; };
-		8BF70BF52BA43A91000AFBD4 /* ClockLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF70BF42BA43A91000AFBD4 /* ClockLabelView.swift */; };
+		8BF70BF32BA42C18000AFBD4 /* ControlButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF70BF22BA42C18000AFBD4 /* ControlButtonView.swift */; };
+		8BF70BF52BA43A91000AFBD4 /* ScaleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF70BF42BA43A91000AFBD4 /* ScaleView.swift */; };
 		8BF70BF72BA43BA2000AFBD4 /* OrientationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF70BF62BA43BA2000AFBD4 /* OrientationManager.swift */; };
 		8BF70BF92BA44EE7000AFBD4 /* TextTimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF70BF82BA44EE7000AFBD4 /* TextTimerViewModel.swift */; };
-		8BF70BFE2BAEEF99000AFBD4 /* CircleTimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF70BFD2BAEEF99000AFBD4 /* CircleTimerViewModel.swift */; };
-		8BF70C002BAEF2A4000AFBD4 /* ButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF70BFF2BAEF2A4000AFBD4 /* ButtonViewModel.swift */; };
+		8BF70BFE2BAEEF99000AFBD4 /* CircularTimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF70BFD2BAEEF99000AFBD4 /* CircularTimerViewModel.swift */; };
+		8BF70C002BAEF2A4000AFBD4 /* ControlButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF70BFF2BAEF2A4000AFBD4 /* ControlButtonViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8B0591152B88E1C30017D5F5 /* Pomodoro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pomodoro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B0591182B88E1C30017D5F5 /* PomodoroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroApp.swift; sourceTree = "<group>"; };
-		8B05911A2B88E1C30017D5F5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8B05911A2B88E1C30017D5F5 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		8B05911C2B88E1C50017D5F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B05911F2B88E1C50017D5F5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		8B0591262B88E1DA0017D5F5 /* CircleTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleTimerView.swift; sourceTree = "<group>"; };
+		8B0591262B88E1DA0017D5F5 /* CircularTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularTimerView.swift; sourceTree = "<group>"; };
 		8B40D4702B99CCF000268A84 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		8B40D4742B99E15200268A84 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B736C8A2B93BB5D00C337C4 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
-		8B8E962B2B96970E004D3B58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		8BA650CE2B99ACFA00B18BBC /* ClockProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockProgressView.swift; sourceTree = "<group>"; };
+		8B8E962B2B96970E004D3B58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B8ED1062BB6FCED009DD699 /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
+		8BA650CE2B99ACFA00B18BBC /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		8BED9CAE2B8F886E00B26FDF /* HandleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandleView.swift; sourceTree = "<group>"; };
-		8BF70BEC2BA421C6000AFBD4 /* TimerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TimerService.swift; path = Pomodoro/Service/TimerService.swift; sourceTree = SOURCE_ROOT; };
+		8BF70BEC2BA421C6000AFBD4 /* TimerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TimerService.swift; path = Pomodoro/Core/Service/TimerService.swift; sourceTree = SOURCE_ROOT; };
 		8BF70BEE2BA4242C000AFBD4 /* ScenePhaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenePhaseManager.swift; sourceTree = "<group>"; };
 		8BF70BF02BA42BFF000AFBD4 /* TextTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTimerView.swift; sourceTree = "<group>"; };
-		8BF70BF22BA42C18000AFBD4 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
-		8BF70BF42BA43A91000AFBD4 /* ClockLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockLabelView.swift; sourceTree = "<group>"; };
+		8BF70BF22BA42C18000AFBD4 /* ControlButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlButtonView.swift; sourceTree = "<group>"; };
+		8BF70BF42BA43A91000AFBD4 /* ScaleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleView.swift; sourceTree = "<group>"; };
 		8BF70BF62BA43BA2000AFBD4 /* OrientationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrientationManager.swift; sourceTree = "<group>"; };
 		8BF70BF82BA44EE7000AFBD4 /* TextTimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTimerViewModel.swift; sourceTree = "<group>"; };
-		8BF70BFD2BAEEF99000AFBD4 /* CircleTimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleTimerViewModel.swift; sourceTree = "<group>"; };
-		8BF70BFF2BAEF2A4000AFBD4 /* ButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViewModel.swift; sourceTree = "<group>"; };
+		8BF70BFD2BAEEF99000AFBD4 /* CircularTimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularTimerViewModel.swift; sourceTree = "<group>"; };
+		8BF70BFF2BAEF2A4000AFBD4 /* ControlButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlButtonViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,8 +70,6 @@
 		8B05910C2B88E1C30017D5F5 = {
 			isa = PBXGroup;
 			children = (
-				8B40D4702B99CCF000268A84 /* Localizable.xcstrings */,
-				8B40D4742B99E15200268A84 /* LaunchScreen.storyboard */,
 				8B0591172B88E1C30017D5F5 /* Pomodoro */,
 				8B0591162B88E1C30017D5F5 /* Products */,
 			);
@@ -86,13 +86,11 @@
 		8B0591172B88E1C30017D5F5 /* Pomodoro */ = {
 			isa = PBXGroup;
 			children = (
-				8B8E962B2B96970E004D3B58 /* Info.plist */,
-				8B0591182B88E1C30017D5F5 /* PomodoroApp.swift */,
-				8B05911A2B88E1C30017D5F5 /* ContentView.swift */,
-				8B736C872B93BA1500C337C4 /* View */,
-				8B736C882B93BA4500C337C4 /* ViewModel */,
-				8B736C892B93BA5500C337C4 /* Service */,
 				8B05911C2B88E1C50017D5F5 /* Assets.xcassets */,
+				8B8E962B2B96970E004D3B58 /* Info.plist */,
+				8B2942912BC6AC0D008196AD /* App */,
+				8B2942922BC6AC15008196AD /* Core */,
+				8B2942932BC6AC19008196AD /* Feature */,
 				8B05911E2B88E1C50017D5F5 /* Preview Content */,
 			);
 			path = Pomodoro;
@@ -106,30 +104,37 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		8B736C872B93BA1500C337C4 /* View */ = {
+		8B2942912BC6AC0D008196AD /* App */ = {
 			isa = PBXGroup;
 			children = (
-				8BF70BF02BA42BFF000AFBD4 /* TextTimerView.swift */,
-				8B0591262B88E1DA0017D5F5 /* CircleTimerView.swift */,
-				8BA650CE2B99ACFA00B18BBC /* ClockProgressView.swift */,
-				8BF70BF42BA43A91000AFBD4 /* ClockLabelView.swift */,
-				8BED9CAE2B8F886E00B26FDF /* HandleView.swift */,
-				8BF70BF22BA42C18000AFBD4 /* ButtonView.swift */,
+				8B0591182B88E1C30017D5F5 /* PomodoroApp.swift */,
+				8B40D4742B99E15200268A84 /* LaunchScreen.storyboard */,
+				8B40D4702B99CCF000268A84 /* Localizable.xcstrings */,
 			);
-			path = View;
+			path = App;
 			sourceTree = "<group>";
 		};
-		8B736C882B93BA4500C337C4 /* ViewModel */ = {
+		8B2942922BC6AC15008196AD /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				8BF70BF82BA44EE7000AFBD4 /* TextTimerViewModel.swift */,
-				8BF70BFD2BAEEF99000AFBD4 /* CircleTimerViewModel.swift */,
-				8BF70BFF2BAEF2A4000AFBD4 /* ButtonViewModel.swift */,
+				8B2942962BC6AD03008196AD /* Service */,
+				8B8ED1052BB6FCCA009DD699 /* Extension */,
 			);
-			path = ViewModel;
+			path = Core;
 			sourceTree = "<group>";
 		};
-		8B736C892B93BA5500C337C4 /* Service */ = {
+		8B2942932BC6AC19008196AD /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				8B05911A2B88E1C30017D5F5 /* TimerView.swift */,
+				8B2942972BC6AD32008196AD /* TextTimer */,
+				8B2942982BC6AD3B008196AD /* CircularTimer */,
+				8B29429C2BC6B175008196AD /* ControlButton */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		8B2942962BC6AD03008196AD /* Service */ = {
 			isa = PBXGroup;
 			children = (
 				8BF70BEC2BA421C6000AFBD4 /* TimerService.swift */,
@@ -138,6 +143,68 @@
 				8BF70BF62BA43BA2000AFBD4 /* OrientationManager.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		8B2942972BC6AD32008196AD /* TextTimer */ = {
+			isa = PBXGroup;
+			children = (
+				8BF70BF02BA42BFF000AFBD4 /* TextTimerView.swift */,
+				8BF70BF82BA44EE7000AFBD4 /* TextTimerViewModel.swift */,
+			);
+			path = TextTimer;
+			sourceTree = "<group>";
+		};
+		8B2942982BC6AD3B008196AD /* CircularTimer */ = {
+			isa = PBXGroup;
+			children = (
+				8B0591262B88E1DA0017D5F5 /* CircularTimerView.swift */,
+				8BF70BFD2BAEEF99000AFBD4 /* CircularTimerViewModel.swift */,
+				8B29429A2BC6AF39008196AD /* Progress */,
+				8B29429B2BC6AF50008196AD /* Scale */,
+				8B2942992BC6AF1C008196AD /* Handle */,
+			);
+			path = CircularTimer;
+			sourceTree = "<group>";
+		};
+		8B2942992BC6AF1C008196AD /* Handle */ = {
+			isa = PBXGroup;
+			children = (
+				8BED9CAE2B8F886E00B26FDF /* HandleView.swift */,
+			);
+			path = Handle;
+			sourceTree = "<group>";
+		};
+		8B29429A2BC6AF39008196AD /* Progress */ = {
+			isa = PBXGroup;
+			children = (
+				8BA650CE2B99ACFA00B18BBC /* ProgressView.swift */,
+			);
+			path = Progress;
+			sourceTree = "<group>";
+		};
+		8B29429B2BC6AF50008196AD /* Scale */ = {
+			isa = PBXGroup;
+			children = (
+				8BF70BF42BA43A91000AFBD4 /* ScaleView.swift */,
+			);
+			path = Scale;
+			sourceTree = "<group>";
+		};
+		8B29429C2BC6B175008196AD /* ControlButton */ = {
+			isa = PBXGroup;
+			children = (
+				8BF70BF22BA42C18000AFBD4 /* ControlButtonView.swift */,
+				8BF70BFF2BAEF2A4000AFBD4 /* ControlButtonViewModel.swift */,
+			);
+			path = ControlButton;
+			sourceTree = "<group>";
+		};
+		8B8ED1052BB6FCCA009DD699 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8B8ED1062BB6FCED009DD699 /* View+.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,20 +294,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B0591272B88E1DA0017D5F5 /* CircleTimerView.swift in Sources */,
+				8B0591272B88E1DA0017D5F5 /* CircularTimerView.swift in Sources */,
 				8BF70BF92BA44EE7000AFBD4 /* TextTimerViewModel.swift in Sources */,
 				8BED9CAF2B8F886E00B26FDF /* HandleView.swift in Sources */,
 				8BF70BF72BA43BA2000AFBD4 /* OrientationManager.swift in Sources */,
-				8BF70BF32BA42C18000AFBD4 /* ButtonView.swift in Sources */,
-				8B05911B2B88E1C30017D5F5 /* ContentView.swift in Sources */,
-				8BF70C002BAEF2A4000AFBD4 /* ButtonViewModel.swift in Sources */,
+				8BF70BF32BA42C18000AFBD4 /* ControlButtonView.swift in Sources */,
+				8B05911B2B88E1C30017D5F5 /* TimerView.swift in Sources */,
+				8BF70C002BAEF2A4000AFBD4 /* ControlButtonViewModel.swift in Sources */,
 				8B736C8B2B93BB5D00C337C4 /* NotificationService.swift in Sources */,
 				8BF70BEF2BA4242C000AFBD4 /* ScenePhaseManager.swift in Sources */,
 				8B0591192B88E1C30017D5F5 /* PomodoroApp.swift in Sources */,
-				8BF70BF52BA43A91000AFBD4 /* ClockLabelView.swift in Sources */,
+				8BF70BF52BA43A91000AFBD4 /* ScaleView.swift in Sources */,
 				8BF70BED2BA421C6000AFBD4 /* TimerService.swift in Sources */,
-				8BA650CF2B99ACFA00B18BBC /* ClockProgressView.swift in Sources */,
-				8BF70BFE2BAEEF99000AFBD4 /* CircleTimerViewModel.swift in Sources */,
+				8B8ED1072BB6FCED009DD699 /* View+.swift in Sources */,
+				8BA650CF2B99ACFA00B18BBC /* ProgressView.swift in Sources */,
+				8BF70BFE2BAEEF99000AFBD4 /* CircularTimerViewModel.swift in Sources */,
 				8BF70BF12BA42BFF000AFBD4 /* TextTimerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,5 +1,5 @@
 //
-//  ClockLabelView.swift
+//  ScaleView.swift
 //  Pomodoro
 //
 //  Created by 고혜지 on 3/15/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ClockLabelView: View {
+struct ScaleView: View {
   @EnvironmentObject var timer: TimerService
   let geometry: GeometryProxy
   let device = UIDevice.current.userInterfaceIdiom
@@ -40,6 +40,7 @@ struct ClockLabelView: View {
                 .font(device == .pad ? .title2.bold() : .caption)
             }
             .offset(y: -geometry.size.width * 0.57)
+            .disabled(timer.state == .running ? true : false)
           }
         }
         .foregroundStyle(Color.text)
@@ -51,7 +52,7 @@ struct ClockLabelView: View {
 
 #Preview {
     GeometryReader { geometry in
-      ClockLabelView(geometry: geometry)
+      ScaleView(geometry: geometry)
     }
     .frame(width: UIScreen.main.bounds.width * 0.76)
 }

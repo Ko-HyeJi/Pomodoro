@@ -1,5 +1,5 @@
 //
-//  CircleTimerViewModel.swift
+//  CircularTimerViewModel.swift
 //  Pomodoro
 //
 //  Created by 고혜지 on 3/23/24.
@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-final class CircleTimerViewModel {
+final class CircularTimerViewModel {
   private let haptic = UISelectionFeedbackGenerator()
   private let timer = TimerService.shared
   

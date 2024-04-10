@@ -1,5 +1,5 @@
 //
-//  ButtonView.swift
+//  ControlButtonView.swift
 //  Pomodoro
 //
 //  Created by 고혜지 on 3/15/24.
@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct ButtonView: View {
-  private var viewModel = ButtonViewModel()
+struct ControlButtonView: View {
+  private var viewModel = ControlButtonViewModel()
   private let radiusSize = 25.0
   private let buttonHeight = 60.0
   
@@ -19,10 +19,11 @@ struct ButtonView: View {
       switch viewModel.state {
       case .play:
         RoundedRectangle(cornerRadius: radiusSize)
-          .softOuterShadow(
-            darkShadow: .darkShadow,
-            lightShadow: .lightShadow
-          )
+          .outerShadow()
+//          .softOuterShadow(
+//            darkShadow: .darkShadow,
+//            lightShadow: .lightShadow
+//          )
       case .pause:
         RoundedRectangle(cornerRadius: radiusSize)
           .softInnerShadow(
@@ -39,7 +40,7 @@ struct ButtonView: View {
   }
 }
 
-extension ButtonView {
+extension ControlButtonView {
   private func image(_ imageName: String) -> some View {
     Image(systemName: imageName)
       .dynamicTypeSize(.xxxLarge)
@@ -56,6 +57,6 @@ extension ButtonView {
 }
 
 #Preview {
-  ButtonView()
+  ControlButtonView()
     .environmentObject(TimerService())
 }

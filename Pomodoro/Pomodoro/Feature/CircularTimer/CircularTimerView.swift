@@ -1,5 +1,5 @@
 //
-//  CircleTimerView.swift
+//  CircularTimerView.swift
 //  Pomodoro
 //
 //  Created by 고혜지 on 2/23/24.
@@ -7,17 +7,17 @@
 
 import SwiftUI
 
-struct CircleTimerView: View {
+struct CircularTimerView: View {
   @EnvironmentObject private var timer: TimerService
   @EnvironmentObject private var orientation: OrientationManager
-  private var viewModel = CircleTimerViewModel()
+  private var viewModel = CircularTimerViewModel()
   
   var body: some View {
     ZStack {
       backgroundLayer
-      ClockProgressView()
+      ProgressView()
       GeometryReader { geometry in
-        ClockLabelView(geometry: geometry)
+        ScaleView(geometry: geometry)
         HandleView(geometry: geometry)
       }
       centerCircle
@@ -28,12 +28,16 @@ struct CircleTimerView: View {
   }
 }
 
-private extension CircleTimerView {
+private extension CircularTimerView {
   private var backgroundLayer: some View {
     Group {
       Circle()
         .foregroundStyle(Color.main)
-        .softOuterShadow(darkShadow: .darkShadow, lightShadow: .lightShadow)
+        .outerShadow()
+//        .softOuterShadow(
+//          darkShadow: .darkShadow,
+//          lightShadow: .lightShadow
+//        )
       Rectangle()
         .foregroundStyle(Color(UIColor.systemBackground).opacity(0.3))
         .frame(width: 0.5, height: orientation.screenSize * 0.38)
@@ -51,7 +55,7 @@ private extension CircleTimerView {
 }
 
 #Preview {
-  CircleTimerView()
+  CircularTimerView()
     .environmentObject(TimerService())
     .environmentObject(OrientationManager())
 }

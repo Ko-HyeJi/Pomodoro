@@ -1,5 +1,5 @@
 //
-//  ClockProgressView.swift
+//  ProgressView.swift
 //  Pomodoro
 //
 //  Created by 고혜지 on 3/7/24.
@@ -14,7 +14,7 @@ struct ProgressItem {
   let color: Color
 }
 
-struct ClockProgressView: View {
+struct ProgressView: View {
   @EnvironmentObject var timer: TimerService
 
   var body: some View {
