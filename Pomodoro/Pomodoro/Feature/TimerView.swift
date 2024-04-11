@@ -9,8 +9,9 @@ import SwiftUI
 import Neumorphic
 
 struct TimerView: View {
-  @EnvironmentObject var timer: TimerService
-  @EnvironmentObject var orientation: OrientationManager
+  @EnvironmentObject private var timer: TimerService
+  @EnvironmentObject private var orientation: OrientationManager
+  @FocusState private var focusedField: UUID?
   
   var body: some View {
     GeometryReader { geometry in
@@ -23,6 +24,12 @@ struct TimerView: View {
     }
     .ignoresSafeArea()
     .background { Color.main.ignoresSafeArea() }
+    .overlay {
+      if focusedField != nil {
+        Color.white.opacity(0.001)
+          .onTapGesture { focusedField = nil }
+      }
+    }
   }
 }
 
@@ -32,7 +39,7 @@ extension TimerView {
       Spacer()
       VStack {
         Spacer()
-        TextTimerView()
+        TextTimerView(focusedField: _focusedField)
         Spacer()
         CircularTimerView()
         Spacer()
@@ -54,7 +61,7 @@ extension TimerView {
           .padding(orientation.screenSize * 0.08)
         Spacer()
         VStack(spacing: 30) {
-          TextTimerView()
+          TextTimerView(focusedField: _focusedField)
           ControlButtonView()
             .frame(maxWidth: 300)
             .frame(width: orientation.screenSize * 0.4)

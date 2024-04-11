@@ -7,17 +7,12 @@
 
 import Foundation
 
-final class TextTimerViewModel {
-  private let timer = TimerService.shared
-  private var minutes: String { formatter(timer.counter / 60) }
-  private var seconds: String { formatter(timer.counter % 60) }
-  var time: String { "\(minutes):\(seconds)" }
+final class TextTimerViewModel: ObservableObject {
+//  let timer = TimerService.shared
+  @Published var minutes: String = "00"
+  @Published var seconds: String = "00"
   
-  func getTime() -> String{
-    return time
-  }
-  
-  private func formatter(_ num: Int) -> String {
+  func formatter(_ num: Int) -> String {
     return String(format: "%02d", num)
   }
 }
